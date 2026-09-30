@@ -1,5 +1,6 @@
 import { useState, type JSX } from 'react';
 import { Counter } from './examples/Counter.tsx';
+import { Selectors } from './examples/Selectors.tsx';
 
 type Tab = {
     id: 'counter' | 'selectors' | 'todos';
@@ -8,7 +9,10 @@ type Tab = {
 };
 
 // Вкладки примеров в порядке чтения из README.
-const tabs: Tab[] = [{ id: 'counter', title: 'Counter', Component: Counter }];
+const tabs: Tab[] = [
+    { id: 'counter', title: 'Counter', Component: Counter },
+    { id: 'selectors', title: 'Selectors', Component: Selectors },
+];
 
 export function App() {
     const [activeId, setActiveId] = useState<Tab['id'] | undefined>(tabs[0]?.id);
