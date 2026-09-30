@@ -1,6 +1,7 @@
 import { useState, type JSX } from 'react';
 import { Counter } from './examples/Counter.tsx';
 import { Selectors } from './examples/Selectors.tsx';
+import { Todos } from './examples/Todos.tsx';
 
 type Tab = {
     id: 'counter' | 'selectors' | 'todos';
@@ -12,6 +13,7 @@ type Tab = {
 const tabs: Tab[] = [
     { id: 'counter', title: 'Counter', Component: Counter },
     { id: 'selectors', title: 'Selectors', Component: Selectors },
+    { id: 'todos', title: 'Todos', Component: Todos },
 ];
 
 export function App() {
