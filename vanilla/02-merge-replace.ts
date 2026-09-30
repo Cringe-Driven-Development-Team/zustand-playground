@@ -24,7 +24,8 @@ store.setState({ user: { name: 'Денис' } });
 console.log('setState({ user: { name } }) — role пропал:', store.getState().user);
 
 // Правильно: вложенный объект разворачиваем руками.
-store.setState({ user: { name: 'Ерофей', role: 'frontend' } });
+// Сначала вернём исходного user (с role), чтобы было что сохранять.
+store.setState({ user: store.getInitialState().user });
 store.setState((state) => ({ user: { ...state.user, name: 'Денис' } }));
 console.log(
     'setState((s) => ({ user: { ...s.user, name } })) — role на месте:',
