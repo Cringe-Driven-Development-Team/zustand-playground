@@ -1,0 +1,34 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 16px;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+nav button.active {
+    font-weight: bold;
+    outline: 2px solid currentColor;
+}
+
+section {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+
+.render-count {
+    border: 1px solid #888;
+    border-radius: 4px;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 12px;
+    margin-bottom: 8px;
+    padding: 2px 6px;
+}
